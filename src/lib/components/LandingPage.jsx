@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 
 
-export default function LandingPage({ onLaunchApp}) {
+export default function LandingPage({ onLaunchApp, isDark }) {
 
     const MESSAGES = [
     "TO DO IS TO BE\n-FRIEDRICH NIETZE",
@@ -26,17 +26,17 @@ export default function LandingPage({ onLaunchApp}) {
 
     const features = [
     {
-      icon: "🎯",
+      
       title: "Define goals",
       description: "You can set specific, and measurable targets for your project goals"
     },
     {
-      icon: "📈",
+      
       title: "Track the progress",
       description: "Add progress and watch the bard fill"
     },
     {
-      icon: "🏆",
+      
       title: "Celebrate milestones",
       description: "Reach milestones and stay motivated for more"
     }
@@ -88,7 +88,13 @@ return (
           </div>
         </section>
         <footer className="border-t border-neutral-900 bg-neutral-900/50 mt-16">
-        <div className="max-w-7xl mx-auto px-6 py-12 text-center text-neutral-500 text-sm">
+        <div className={`max-w-7xl mx-auto px-6 py-12 text-center  text-sm ${
+          isDark
+          ? "border-neutral-800 bg-neutral-950/80"
+          : "border-neutral-200 bg-white/80"
+
+        }`}
+        >
           <p>&copy; 2026 Noah Nikolas Markakis | Built during Hack Club's Stardance challenge.</p>
           <p className="mt-2">Good Luck with your projects!</p>
         </div>

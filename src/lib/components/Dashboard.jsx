@@ -1,7 +1,7 @@
 import { useState } from "react";
 import GoalWidget from "./GoalWidget";
 
-export default function Dashboard({ goals, setGoals, onOpenModal, onAddProgress, onDeleteGoal }) {
+export default function Dashboard({ goals, setGoals, onOpenModal, onAddProgress, onDeleteGoal, onEditGoal }) {
   const [draggedIndex, setDraggedIndex] = useState(null);
 
   const handleDragStart = (e, index) => {
@@ -29,9 +29,9 @@ export default function Dashboard({ goals, setGoals, onOpenModal, onAddProgress,
     <main className="max-w-7xl mx-auto px-6 py-10">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight">Your Goal Workspace</h2>
-          <p className="text-neutral-400 text-sm mt-1">
-            Drag cards by the handle <span className="text-neutral-200 font-mono">⠿</span> to reorder widgets.
+          <h2 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">Your Goal Workspace</h2>
+          <p className="text-neutral-500 dark:text-neutral-400 text-sm mt-1">
+            Drag cards by the handle <span className="text-neutral-500 dark:text-neutral-200 font-mono">⠿</span> to reorder widgets.
           </p>
         </div>
 
@@ -44,11 +44,11 @@ export default function Dashboard({ goals, setGoals, onOpenModal, onAddProgress,
       </div>
 
       {goals.length === 0 ? (
-        <div className="border border-dashed border-neutral-800 rounded-3xl p-12 text-center text-neutral-500">
-          <p className="text-lg">No active goal widgets yet.</p>
+        <div className="border border-dashed border-neutral-300 dark:border-neutral-800 rounded-3xl p-12 text-center text-neutral-500 dark:text-neutral-400">
+          <p className="text-lg text-neutral-700 dark:text-neutral-200">No active goal widgets yet.</p>
           <button
             onClick={onOpenModal}
-            className="mt-4 text-emerald-400 underline font-medium hover:text-emerald-300"
+            className="mt-4 text-emerald-600 dark:text-emerald-400 underline font-medium hover:text-emerald-500 dark:hover:text-emerald-300"
           >
             Create one now
           </button>
@@ -66,6 +66,7 @@ export default function Dashboard({ goals, setGoals, onOpenModal, onAddProgress,
               onDragEnd={handleDragEnd}
               onAddProgress={onAddProgress}
               onDeleteGoal={onDeleteGoal}
+              onEditGoal={onEditGoal}
             />
           ))}
         </div>
