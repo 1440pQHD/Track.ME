@@ -1,5 +1,6 @@
 import React from "react";
-
+import logo from "../../assets/logo.png";
+import logoLight from "../../assets/logo_light.png";
 export default function About({ isDark }) {
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
@@ -8,7 +9,7 @@ export default function About({ isDark }) {
           About
         </h1>
         <img
-          src={isDark ? "/src/assets/logo.png" : "/src/assets/logo_light.png"}
+          src={isDark ? logo : logoLight}
           alt="Track.ME"
           className="h-16 w-auto object-contain inline-block"
         />

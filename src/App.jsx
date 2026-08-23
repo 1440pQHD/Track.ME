@@ -10,8 +10,9 @@ import confetti from "canvas-confetti";
 import About from "./lib/components/About";
 import EditGoalModal from "./lib/components/EditGoalModal";
 import EditWorkspaceModal from "./lib/components/EditWorkspaceModal";
-const API_BASE_URL = "http://192.168.1.239:3000/api"; // Change this to the IP adress of the Node.JS server you are running
-
+const API_BASE_URL = "/api"; // Change this to the IP adress of the Node.JS server you are running (I'm using a vps so everything is on the same machine)
+import logo from "./assets/logo.png";
+import logoLight from "./assets/logo_light.png";
 
 const MESSAGES = [
   "Track your daily goals effortlessly.",
@@ -279,7 +280,7 @@ const [editingWorkspace, setEditingWorkspace] = useState(null);
             onClick={() => setCurrentView("landing")}
             >
               <img
-                src={isDark ? "/src/assets/logo.png" : "/src/assets/logo_light.png"}
+                src={isDark ? logo : logoLight}
                 alt="Track.ME"
                 className="h-12 w-auto object-contain"
               />
