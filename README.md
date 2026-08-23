@@ -27,5 +27,9 @@ Because I burn out after 3 days of working on it, and I never have a clear overv
 
 The backend is a simple Node.js server that uses PUT requests to store user data.
 <img width="444" height="278" alt="image" src="https://github.com/user-attachments/assets/ec722498-af36-4e96-9040-ec0ea19d0cc0" />
+
+
 The user login system works with an 8-digit alphanumeric code that is randomly generated. The maximum number of combinations is 2.8 trillion!
+
+The backend is currently hosted on a VPS in London alongside the website.
 
