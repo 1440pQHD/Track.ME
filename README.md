@@ -3,7 +3,12 @@
 
 Web-based goal tracker made to prevent procrastination and provide a clear overview of how close you are to achieving those goals, coded in React with a backend made in Node.JS.
 
-# The idea
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Setup](#setup)
+
+## Introduction
 
 I'm going to be honest, I have a problem. Every time I want to start a big project like an RC plane or a Robot arm, I never finish it. I always run out of motivation, and it ends up sitting half-completed in the corner. The most recent example would be a plane I attempted to 3d print (Aeroshark specifically). Long story short, too many things burned me out and I never finished it. As and example, I wanted to build my own RC plane. Specifically, the AeroShark 3D-printable RC plane. Because there were so many different things to do (printing parts, assembly, calibrating motor, ordering the right parts etc.) I lost overview and, let's just say it's collecting dust in a corner now.
 
@@ -12,7 +17,10 @@ The goal of my project is to help people prevent stuff like this.
 <img width="973" height="897" alt="image" src="https://github.com/user-attachments/assets/cdbf6d8e-2c69-4683-a1f5-1487296723f0" />
 
 
-# Features
+
+
+
+## Features
 
 1. Create and delete widgets 
 2. Draggable widgets for organization
@@ -21,7 +29,7 @@ The goal of my project is to help people prevent stuff like this.
 5. Polished UI/UX elements with sound effects / visual effects
 6. Dark mode / Light mode
 
-# How to set it up
+## Setup
 Project structure
 ```text
 track-me/
