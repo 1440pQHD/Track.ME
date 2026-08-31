@@ -48,10 +48,12 @@ npm install
 ## 3. Set up Environment Variables
 Create a .env file inside the ```track-me-backend``` folder using this template (or .env.example provided in the rep)
 ```
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-FRONTEND_URL=your_front_end_url_here
+PORT=3000
+DB_USER= postgres
+DB_PASSWORD=YourPasswordHere ;)
+DB_HOST=localhost (If running on the same machine)
+DB_PORT=5432
+DB_NAME=trackme_db
 ```
 ## 4. CD out of the backend folder and back to the root folder. Once there, run:
 ```npm install```
