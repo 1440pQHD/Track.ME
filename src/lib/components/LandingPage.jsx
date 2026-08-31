@@ -45,7 +45,7 @@ return (
     <main className="max-w-7xl mx-auto px-6 py-20">
         <section className="text-center flex flex-col items-center">
             <div className="inline-flex items-center gap-2 bg-emerald-950 border border-emerald-800 px-3 py-1 rounded-full text-emerald-300 text-sm mb-6">
-                <span>Made for Stardance 2026</span>
+                <span>Made for Macondo 2026</span>
             </div>
 
             <div className="mb-8 w-full max-w-4xl mx-auto flex justify-center scale-90 md:scale-100">
@@ -95,7 +95,7 @@ return (
 
         }`}
         >
-          <p>&copy; 2026 Noah Nikolas Markakis | Built during Hack Club's Stardance challenge.</p>
+          <p>&copy; 2026 Noah Nikolas Markakis | Built during Hack Club's Macondo challenge.</p>
           <p className="mt-2">Good Luck with your projects!</p>
         </div>
       </footer>

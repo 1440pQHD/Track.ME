@@ -14,6 +14,8 @@ const API_BASE_URL = "/api"; // Change this to the IP adress of the Node.JS serv
 import logo from "./assets/logo.png";
 import logoLight from "./assets/logo_light.png";
 
+document.title="Track.ME"
+
 const MESSAGES = [
   "Track your daily goals effortlessly.",
   "Sync across all your devices instantly.",
@@ -309,33 +311,38 @@ const [editingWorkspace, setEditingWorkspace] = useState(null);
 
             
 
-            <button
-              onClick={() => setCurrentView(currentView === "landing" ? "app" : "landing")}
-              className={`text-sm transition underline underline-offset-4 ${
-                isDark ? "text-neutral-300 hover:text-white" : "text-neutral-600 hover:text-neutral-900"
-              }`}
-            >
-              {currentView === "landing" ? "Switch to Dashboard" : "Landing Page"}
-            </button>
-            <button
-              onClick={()=> setCurrentView("about")}
-              className={`text-sm transition ${
-                currentView === "about"
-                  ? "text-emerald-500 dark:text-emerald-400 font-medium underline decoration-emerald-400"
-                  : isDark ? "text-neutral-300 hover:text-white" : "text-neutral-600 hover:text-neutral-900"
-              }`}
-            >
-              About
-            </button>
-              <button
-              onClick={() => {
-                if (currentView === "landing") setCurrentView("app");
-                else setIsModalOpen(true);
-              }}
-              className="bg-emerald-500 hover:bg-emerald-600 text-sm px-4 py-2 rounded-full font-semibold text-neutral-950 transition active:scale-95"
-            >
-              {currentView === "landing" ? "Open App" : "+ New Goal"}
-            </button>
+                    <button
+                      onClick={() => setCurrentView(currentView === "landing" ? "app" : "landing")}
+                      className={`text-sm transition underline underline-offset-4 ${
+                        isDark ? "text-neutral-300 hover:text-white" : "text-neutral-600 hover:text-neutral-900"
+                      }`}
+                    >
+                      {currentView === "landing" ? "Switch to Dashboard" : "Landing Page"}
+                    </button>
+
+                    <button
+                      onClick={() => setCurrentView("about")}
+                      className={`text-sm transition ${
+                        currentView === "about"
+                          ? "text-emerald-500 dark:text-emerald-400 font-medium underline decoration-emerald-400"
+                          : isDark ? "text-neutral-300 hover:text-white" : "text-neutral-600 hover:text-neutral-900"
+                      }`}
+                    >
+                      About
+                    </button>
+
+                    <button
+                      onClick={() => {
+                        if (currentView === "app") {
+                          setIsModalOpen(true);
+                        } else {
+                          setCurrentView("app");
+                        }
+                      }}
+                      className="bg-emerald-500 hover:bg-emerald-600 text-sm px-4 py-2 rounded-full font-semibold text-neutral-950 transition active:scale-95"
+                    >
+          {currentView === "app" ? "+ New Goal" : "Open App"}
+        </button>
           </div>
         </nav>
       </header>
