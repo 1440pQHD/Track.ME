@@ -48,6 +48,10 @@ First of all, you would need to get a server to host the website and the backend
 git clone [https://github.com/1440pQHD/track-me.git](https://github.com/1440pQHD/track-me.git)
 ```
 
+## 2. Open your terminal and type:
+```psql -U postgres```
+And then
+```CREATE DATABASE trackme_db;```
 ## 2. Navigate into the ```track-me-backend``` folder and install alldependencies by typing:
 ```
 cd track-me-backend
